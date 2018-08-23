@@ -112,11 +112,11 @@ eval("module.exports = __webpack_require__.p + \"index.html\";\n\n//# sourceURL=
 /*!********************!*\
   !*** ./js/main.js ***!
   \********************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/main.css */ \"./css/main.css\");\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_main_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _html_index_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../html/index.html */ \"./html/index.html\");\n/* harmony import */ var _html_index_html__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_html_index_html__WEBPACK_IMPORTED_MODULE_1__);\n\r\n \n\n//# sourceURL=webpack:///./js/main.js?");
+eval("\n\n__webpack_require__(/*! ../css/main.css */ \"./css/main.css\");\n\n__webpack_require__(/*! ../html/index.html */ \"./html/index.html\");\n\nconsole.log('sdasdasd');\n\n//# sourceURL=webpack:///./js/main.js?");
 
 /***/ }),
 
@@ -127,7 +127,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \"h1{\\r\\n    color: aquamarine;\\r\\n}\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./css/main.css?./node_modules/css-loader");
+eval("exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \"h1{\\r\\n    color: aquamarine;\\r\\n}\\r\\nbody{\\r\\n    height: 100vh;\\r\\n    background-color: black;\\r\\n    display: flex;\\r\\n    justify-content: center;\\r\\n    align-items: center;\\r\\n}\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./css/main.css?./node_modules/css-loader");
 
 /***/ }),
 
