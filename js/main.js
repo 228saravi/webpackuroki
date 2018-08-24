@@ -1,6 +1,6 @@
 require('babel-runtime/regenerator')
+require('babel-register')
 require('webpack-hot-middleware/client?reload=true')
-require ('../css/main.css')
-require ('../html/index.html') 
-console.log('sdasdasd')
-debugger
+require ('../css/main.scss')
+require ('../html/index.pug') 
+require('../react/app')

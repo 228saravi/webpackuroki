@@ -1,24 +1,16 @@
 const path =require('path')
 const webpack = require('webpack')
 const HTMLwebpackplugin = require('html-webpack-plugin') 
+const MiniCSSExtractPlugin = require('mini-css-extract-plugin')
 module.exports = {
     entry:{
         main: './js/main.js'
     },
-    mode:'development',
+    mode:'production',
     output:{
         filename:'[name]-bundle.js',
         path: path.resolve(__dirname,'../dist'),
         publicPath: '/'
-    },
-    devtool:"source-map",
-    devServer:{
-        contentBase: 'dist',
-        overlay:true,
-        hot:true,
-        stats:{
-            colors:true
-        }
     },
     module:{
         rules:[
@@ -35,10 +27,13 @@ module.exports = {
                 test:/\.css$/,
                 use:[
                     {
-                        loader: 'style-loader'
+                        loader: MiniCSSExtractPlugin.loader
                     },
                     {
-                        loader: 'css-loader'
+                        loader: 'css-loader',
+                        options: {
+                            minimize: true
+                        }
                     },
                     {
                         loader:'postcss-loader'
@@ -49,13 +44,13 @@ module.exports = {
                 test:/\.scss$/,
                 use:[
                     {
-                        loader: 'style-loader'
+                        loader: MiniCSSExtractPlugin.loader
                     },
                     {
-                        loader: 'css-loader'
-                    },
-                    {
-                        loader: 'postcss-loader'
+                        loader: 'css-loader',
+                        options: {
+                            minimize: true
+                        }
                     },
                     {
                         loader: 'sass-loader'
@@ -95,8 +90,9 @@ module.exports = {
         ]
     },
     plugins:[
-        new webpack.HotModuleReplacementPlugin(),
+        new MiniCSSExtractPlugin(),
         new HTMLwebpackplugin({
+
             template : "./html/index.pug",
 
             title: "dsfsdfsdf"
